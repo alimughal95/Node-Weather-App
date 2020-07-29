@@ -25,22 +25,22 @@ hbs.registerPartials(partialsPath);
 app.get("", (req, res) => {
   res.render("index", {
     title: "WeatherApp",
-    name: "Ali",
+    name: "Ali Hassan",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "about me",
-    name: "Ali me",
+    title: "About",
+    name: "Ali Hassan",
   });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
-    title: "help me",
-    description: "Ali needs a little help",
-    name: "Ali",
+    title: "Help",
+    description: "Page under construction!",
+    name: "Ali Hassan",
   });
 });
 
@@ -95,16 +95,16 @@ app.get("/products", (req, res) => {
 app.get("/help/*", (req, res) => {
   res.render("error", {
     title: "404 Page",
-    name: "Ali",
+    name: "Ali Hassan",
     error: "Help Article not found",
   });
 });
 
-app.get("/data", (req, res) => {
-  res.render("data", {
-    description: "This is data page",
-  });
-});
+// app.get("/data", (req, res) => {
+//   res.render("data", {
+//     description: "This is data page",
+//   });
+// });
 
 // app.get("/error/*", (req, res) => {
 //   res.render("error");
@@ -113,7 +113,7 @@ app.get("/data", (req, res) => {
 app.get("*", (req, res) => {
   res.render("error", {
     title: "Error page",
-    name: "ALI",
+    name: "Ali Hassan",
     error: "Page not found",
   });
 });
